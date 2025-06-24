@@ -56,3 +56,6 @@ docker compose up -d
 # - Frontend: http://localhost:3000
 # - PGAdmin: http://localhost:5050 (admin@example.com/admin)
 ```
+
+## 🛡️ License
+Distributed under Apache License 2.0. Commercial use permitted with attribution.
