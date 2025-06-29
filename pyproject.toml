@@ -1,0 +1,22 @@
+[project]
+name = "project-hub-analyze"
+version = "0.1.0"
+description = "This is a server with you can analayze resilts your applications."
+authors = [
+    {name = "Anton Golubchikov",email = "anton1programmist@gmail.com"}
+]
+license = {text = "Apache License 2.0"}
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi (>=0.115.14,<0.116.0)"
+]
+
+[tool.ruff]
+select = ["ALL"]
+
+[tool.mypy]
+ignore_missing_imports = true
+warn_unused_configs = true
+disallow_any_generics = true
+disallow_subclassing_any = true
