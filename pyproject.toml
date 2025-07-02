@@ -1,0 +1,44 @@
+[project]
+name = "project-hub-analyze"
+version = "0.0.1"
+description = "Project Hub Analyze"
+authors = [
+    { name = "Anton Golubchikov", email = "anton1programmist@gmail.com" },
+]
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "Apache-2.0" }
+dependencies = [
+    "fastapi>=0.115.14,<1.0.0",
+    "uvicorn>=0.35.0,<1.0.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "mypy>=1.16.1,<2.0.0"
+]
+
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.ruff]
+line-length = 88
+lint.select = ["ALL"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["app"]
+required-imports = ["from __future__ import annotations"]
+
+[tool.ruff.lint.flake8-bugbear]
+extend-immutable-calls = ["frozendict"]
+
+[tool.ruff.lint.pylint]
+allow-magic-value-types = ["int", "float", "str"]
+
+[tool.mypy]
+python_version = "3.12"
+ignore_missing_imports = true
+warn_unused_configs = true
+disallow_any_generics = true
+disallow_subclassing_any = true
