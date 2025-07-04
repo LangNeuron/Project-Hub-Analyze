@@ -2,6 +2,6 @@
 
 from __future__ import annotations
 
-from .user import User, UserRegister
+from .user import User, UserDB, UserRegister
 
-__all__ = ["User", "UserRegister"]
+__all__ = ["User", "UserDB", "UserRegister"]
