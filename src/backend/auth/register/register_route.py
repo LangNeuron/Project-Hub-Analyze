@@ -13,6 +13,4 @@ router = APIRouter()
 @router.post("/register")
 def register(user_register_form: UserRegister) -> User:
     """Registration user."""
-    print(user_register_form)
-    user_register_form = UserRegister(**user_register_form.model_dump())
     return user_controller.add_user(user_register_form)

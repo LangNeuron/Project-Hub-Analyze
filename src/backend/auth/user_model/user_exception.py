@@ -8,7 +8,7 @@ class NotConfirmPasswordError(ValueError):
 
     def __init__(self, message: str) -> None:
         """__init__ exception."""
-        super().__init__(message=message)
+        super().__init__(message)
 
 
 class PasswordTooSmallError(ValueError):
@@ -16,4 +16,4 @@ class PasswordTooSmallError(ValueError):
 
     def __init__(self, message: str) -> None:
         """__init__ exception."""
-        super().__init__(message=message)
+        super().__init__(message)
