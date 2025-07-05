@@ -17,3 +17,11 @@ class PasswordTooSmallError(ValueError):
     def __init__(self, message: str) -> None:
         """__init__ exception."""
         super().__init__(message)
+
+
+class UserNameTooSmallError(ValueError):
+    """Exception for username too small."""
+
+    def __init__(self, message: str) -> None:
+        """__init__ exception."""
+        super().__init__(message)
