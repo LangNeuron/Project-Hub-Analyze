@@ -10,8 +10,9 @@ from .user_exception import (
     UserNameTooSmallError,
 )
 
-min_password_length = 8  # TODO: move to config
-min_name_length = 4  # TODO: move to config
+# TODO: move constants to config
+min_password_length = 8
+min_name_length = 4
 
 
 class User(BaseModel):
