@@ -20,11 +20,11 @@ class UserDBModel:
     def add_user(self, user: User) -> UserDB:
         user_in_db = UserDB(
             **user.model_dump(),
-            id=self.last_id,
+            user_id=self.last_id,
         )
         self.storage_by_name[user_in_db.name] = user_in_db
         self.storage_by_email[user_in_db.email] = user_in_db
-        self.storage_by_id[user_in_db.id] = user_in_db
+        self.storage_by_id[user_in_db.user_id] = user_in_db
         self.last_id += 1
         return user
 

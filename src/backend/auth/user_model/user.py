@@ -59,3 +59,12 @@ class UserRegister(User):
         if self.password != self.confirm_password:
             raise NotConfirmPasswordError(message="not confirm password")
         return self
+
+
+class UserLogin(BaseModel):
+    """User model for login."""
+
+    by_name: bool
+    name: str | None
+    email: EmailStr | None
+    password: str

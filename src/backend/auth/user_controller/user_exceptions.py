@@ -10,3 +10,11 @@ class UserExistsError(Exception):
         """Init UserExistsError."""
         super().__init__(message)
         self.message = message
+
+class CredentionalError(Exception):
+    """Raise credentioal error."""
+
+    def __init__(self, message: str) -> None:
+        """Init CredentionalError."""
+        super().__init__(message)
+        self.message = message
