@@ -4,6 +4,8 @@ from __future__ import annotations
 
 from src.backend.auth.user_model import User, UserDB
 
+# TODO: ad real database
+
 
 class UserDBModel:
     """Test storage db."""

@@ -6,7 +6,7 @@ from pydantic import BaseModel, EmailStr, model_validator
 
 from .user_exception import NotConfirmPasswordError, PasswordTooSmallError
 
-min_password_length = 8 # TODO: move to config
+min_password_length = 8  # TODO: move to config
 
 
 class User(BaseModel):
@@ -20,7 +20,7 @@ class User(BaseModel):
 class UserDB(User):
     """User model in database."""
 
-    id: int
+    user_id: int
 
 
 class UserRegister(User):
